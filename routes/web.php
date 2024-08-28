@@ -3,20 +3,19 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Rotas OS
+// Route::resource('clients', ClientController::class);
+// Route::resource('vehicles', VehicleController::class);
+// Route::resource('service-orders', ServiceOrderController::class);
+// Route::resource('service-items', ServiceItemController::class);
+// Route::resource('employees', EmployeeController::class);
+// Route::resource('parts', PartController::class);
+// Route::resource('stocks', StockController::class);
+// Route::resource('invoices', InvoiceController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
